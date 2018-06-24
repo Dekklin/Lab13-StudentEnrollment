@@ -12225,23 +12225,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Owner\\.nuget\\packages\\": {},
+    "C:\\Users\\Collin\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Owner\\source\\repos\\StudentEnrollment\\StudentEnrollment\\StudentEnrollment.csproj",
+      "projectUniqueName": "C:\\Users\\Collin\\codefellows\\Lab13-StudentEnrollment\\StudentEnrollment\\StudentEnrollment.csproj",
       "projectName": "StudentEnrollment",
-      "projectPath": "C:\\Users\\Owner\\source\\repos\\StudentEnrollment\\StudentEnrollment\\StudentEnrollment.csproj",
-      "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Owner\\source\\repos\\StudentEnrollment\\StudentEnrollment\\obj\\",
+      "projectPath": "C:\\Users\\Collin\\codefellows\\Lab13-StudentEnrollment\\StudentEnrollment\\StudentEnrollment.csproj",
+      "packagesPath": "C:\\Users\\Collin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Collin\\codefellows\\Lab13-StudentEnrollment\\StudentEnrollment\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Collin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

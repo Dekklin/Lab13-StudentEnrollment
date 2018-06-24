@@ -11,8 +11,16 @@ namespace StudentEnrollment.Models
 
         public int ID { get; set; }
         [Required]
-        public string Subject { get; set; }
-        public List<Student> Students { get; set; }
-
+        public string Teacher { get; set; }
+        public Subject Subject { get; set; }
     }
+        public enum Subject
+        {
+            Math,
+            Science,
+            English,
+            [Display(Name ="Computer Science")]ComputerScience,
+            Art,
+            History
+        }
 }

@@ -24,7 +24,9 @@ namespace StudentEnrollment.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Subject");
+                    b.Property<int>("Subject");
+
+                    b.Property<string>("Teacher");
 
                     b.HasKey("ID");
 
@@ -37,13 +39,24 @@ namespace StudentEnrollment.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Enrolled");
+                    b.Property<int>("ClassID");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.HasKey("ID");
 
+                    b.HasIndex("ClassID");
+
                     b.ToTable("Students");
+                });
+
+            modelBuilder.Entity("StudentEnrollment.Models.Student", b =>
+                {
+                    b.HasOne("StudentEnrollment.Models.Classes", "Class")
+                        .WithMany()
+                        .HasForeignKey("ClassID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

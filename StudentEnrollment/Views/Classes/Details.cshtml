@@ -1,0 +1,19 @@
+﻿@using StudentEnrollment.Models
+@model StudentEnrollment.Models.ClassDetailViewModel
+
+
+
+
+<h1>Details</h1>
+
+<h3>@Model.Classes.Teacher</h3>
+
+<h3>@Model.Classes.Subject</h3>
+
+@foreach (var x in Model.Students)
+{
+    <p>Name: @x.Name</p>
+    <p>Student ID: @x.ID</p>
+
+
+}

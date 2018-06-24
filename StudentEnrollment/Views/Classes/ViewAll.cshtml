@@ -1,0 +1,12 @@
+﻿@model List<StudentEnrollment.Models.Classes>
+
+
+<h2>Classes</h2>
+
+@foreach (var x in Model)
+{
+<h3>@x.Teacher</h3>
+<p>@x.Subject</p>
+<p><a asp-controller="Classes" asp-action="Details" asp-route-id="@x.ID">View Details</a></p>
+<hr/>
+}
