@@ -26,7 +26,8 @@ namespace StudentEnrollment.Migrations
 
                     b.Property<int>("Subject");
 
-                    b.Property<string>("Teacher");
+                    b.Property<string>("Teacher")
+                        .IsRequired();
 
                     b.HasKey("ID");
 

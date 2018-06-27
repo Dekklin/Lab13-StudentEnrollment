@@ -1,0 +1,25 @@
+﻿@model Student
+
+
+
+<h2> Update @Model.Name</h2>
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Class">Class</label>
+        @(Html.DropDownListFor(mbox => mbox.ClassID, new SelectList((IEnumerable<Classes>)ViewData["Classes"], "ID", "Teacher", "Subject")))
+        <span asp-validation-for="Class" class="text-danger"></span>
+        </div>
+                <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-default" />
+                </div>
+            </form>
+
+            <form asp-action="Update">
+                <input type="hidden" asp-for="ID" />
+                <input type="submit" value="Update" class="btn btn-default" /> |
+                <a asp-action="ViewAll">Back to List</a>
+            </form>

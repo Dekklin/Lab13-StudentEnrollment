@@ -1,12 +1,29 @@
 ﻿@model List<StudentEnrollment.Models.Classes>
+    <Link rel="stylesheet" href="~/StyleSheet.css" type="text/css" />
 
+    <h2>Classes</h2>
+<div class="search">
 
-<h2>Classes</h2>
+    <form asp-controller="Classes" asp-action="ViewAll" method="get">
+        <p>
+            Search Class: <input type="text" name="SearchString">
+            <input type="submit" value="Filter" class="button" />
+        </p>
+    </form>
+</div>
+<table>
+    <tr><th>Teacher</th><th>Subject</th><th>Details</th></tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Teacher</td>
+            <td>@x.Subject</td>
+            <td>
+                <a asp-controller="Classes" asp-action="Details" asp-route-id="@x.ID">View Details</a>
+                <a asp-controller="Classes" asp-action="Update" asp-route-id="@x.ID">Update</a>
+                <a asp-controller="Classes" asp-action="Delete" asp-route-id="@x.ID">Delete</a>
 
-@foreach (var x in Model)
-{
-<h3>@x.Teacher</h3>
-<p>@x.Subject</p>
-<p><a asp-controller="Classes" asp-action="Details" asp-route-id="@x.ID">View Details</a></p>
-<hr/>
-}
+            </td>
+            </tr>
+    }
+</table>

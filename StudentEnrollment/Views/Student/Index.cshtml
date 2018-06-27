@@ -1,1 +1,10 @@
-﻿Student Index
+﻿@model List<StudentEnrollment.Models.Student>
+
+<h2>Classes</h2>
+@foreach (var x in Model)
+{
+    <h3>@x.Name</h3>
+    <p>@x.Class</p>
+    <p><a asp-controller="Student" asp-action="Details" asp-route-id="@x.ID">View Details</a></p>
+    <hr />
+}

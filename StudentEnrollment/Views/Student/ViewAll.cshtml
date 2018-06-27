@@ -1,0 +1,40 @@
+﻿@model List<StudentEnrollment.Models.Student>
+    <Link rel="stylesheet" href="~/StyleSheet.css" type="text/css" />
+
+    <h2>List of Students</h2>
+
+
+    <div class="search">
+        <p>
+            <a asp-action="Create">Create New Student</a>
+        </p>
+        
+  
+        <form asp-controller="Student" asp-action="ViewAll" method="get">
+
+                Name: <input type="text" name="SearchString">
+                <input type="submit" value="Filter" class="button" />
+        </form>
+            
+    </div>
+
+
+    <table>
+        <tr><th>Student ID</th><th>Student Name</th><th>Enrolled Class</th><th>Instructor</th><th>Details</th></tr>
+
+        @foreach (var x in Model)
+        {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.Name</td>
+            <td>@x.Class.Subject</td>
+            <td>@x.Class.Teacher</td>
+            <td><a asp-controller="Student" asp-action="Details" asp-route-id="@x.ID">View Details</a></td>
+            <td><a asp-controller="Student" asp-action="Update" asp-route-id="@x.ID">Update</a></td>
+            <td><a asp-controller="Student" asp-action="Delete" asp-route-id="@x.ID">Delete</a></td>
+
+        </tr>
+
+        }
+
+    </table>

@@ -1,0 +1,18 @@
+﻿@using StudentEnrollment.Models
+@model StudentEnrollment.Models.StudentDetailViewModel
+<Link rel="stylesheet" href="~/StyleSheet.css" type="text/css" />
+
+
+<h2>Details</h2>
+<h3>Instructor: @Model.Class.Teacher</h3>
+<h3>Class enrolled in : @Model.Class.Subject</h3>
+<table>
+    <tr><th>Student ID</th><th>Name of Student</th></tr>
+    @foreach (var x in Model.Students)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.Name</td>
+        </tr>
+    }
+</table>

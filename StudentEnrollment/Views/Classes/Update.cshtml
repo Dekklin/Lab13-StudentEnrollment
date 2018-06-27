@@ -1,4 +1,10 @@
-﻿@model StudentEnrollment.Models.Classes
+﻿@using StudentEnrollment.Models
+@model StudentEnrollment.Models.Classes
+
+<h2>@Model.Subject</h2>
+<h3>@Model.Teacher</h3>
+
+
 
 <form method="post" asp-action="Update">
     <div>
@@ -8,6 +14,7 @@
     <div>
         <label asp-for="Subject">Subject </label>
         <select asp-for="Subject" asp-items="Html.GetEnumSelectList<Subject>()"></select>
+
     </div>
     <div>
         <input type="submit" value="Update" />

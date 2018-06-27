@@ -1,14 +1,18 @@
 ﻿<Link rel="stylesheet" href="~/StyleSheet.css" type="text/css" />
 
 
-<H2>Welcome</H2>
+<H1 class="index">Welcome to my School</H1>
 
-<p>Navigate to the following links for functionality</p>
 
-<p><a asp-controller="Classes" asp-action="Create">Create an Class</a></p>
+<div class="index" id="container">
+<p><a asp-controller="Classes" asp-action="Create">Create a Class</a></p>
 
 <p><a asp-controller="Student" asp-action="Create">Create a Student</a></p>
 
 <p><a asp-controller="Classes" asp-action="ViewAll">View all Classes</a></p>
 
-<p><a asp-controller="Classes" asp-action="ViewAll">View all Students</a></p>
+<p><a asp-controller="Student" asp-action="ViewAll">View all Students</a></p>
+
+
+
+</div>

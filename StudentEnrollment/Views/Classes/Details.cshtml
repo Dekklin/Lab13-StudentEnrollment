@@ -1,19 +1,18 @@
 ﻿@using StudentEnrollment.Models
 @model StudentEnrollment.Models.ClassDetailViewModel
+    <Link rel="stylesheet" href="~/StyleSheet.css" type="text/css" />
 
 
-
-
-<h1>Details</h1>
-
-<h3>@Model.Classes.Teacher</h3>
-
-<h3>@Model.Classes.Subject</h3>
-
-@foreach (var x in Model.Students)
-{
-    <p>Name: @x.Name</p>
-    <p>Student ID: @x.ID</p>
-
-
-}
+    <h2>Details on @Model.Class.Subject class</h2>
+    <h3>Instructor: @Model.Class.Teacher</h3>
+    <table>
+        <tr><th>Student ID</th><th>Name of Student</th><th>Details</th></tr>
+        @foreach (var x in Model.Students)
+        {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.Name</td>
+            <td><a asp-controller="Student" asp-action="Details" asp-route-id="@x.ID">View Details</a></td>
+        </tr>
+        }
+    </table>

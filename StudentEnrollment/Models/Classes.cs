@@ -19,8 +19,8 @@ namespace StudentEnrollment.Models
             Math,
             Science,
             English,
-            [Display(Name ="Computer Science")]ComputerScience,
+            [Display(Name="Computer Science")] ComputerScience,
             Art,
-            History
+            History,
         }
 }

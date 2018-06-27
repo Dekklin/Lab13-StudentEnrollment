@@ -41,7 +41,7 @@ namespace StudentEnrollment.Controllers
             await _context.Class.AddAsync(Class);
             await _context.SaveChangesAsync();
             int id = Class.ID;
-            return View();
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]
@@ -56,7 +56,7 @@ namespace StudentEnrollment.Controllers
         {
             if(id.HasValue)
             {
-                return View(await ClassesDetailViewModel.FromIDAsync(id.Value, _context));
+                return View(await ClassDetailViewModel.FromIDAsync(id.Value, _context));
             }
             else
             {
@@ -85,7 +85,7 @@ namespace StudentEnrollment.Controllers
             }
             _context.Class.Remove(match);
             await _context.SaveChangesAsync();
-            return View();
+            return RedirectToAction("ViewAll");
         }
 
     }
